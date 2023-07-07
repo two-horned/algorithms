@@ -1,9 +1,14 @@
-PDFCMD = groff -ms -k Tpdf
+PDFCMD = groff -ms -k -Tpdf
+PDFDIR = pdf
 N1 = dijkstra
 N2 = depth-first-search
 
 all: pdf
 
 pdf:
-	${PDFCMD} ${N1}.tex > ${N1}.pdf
-	${PDFCMD} ${N2}.tex > ${N2}.pdf
+	mkdir -p ${PDFDIR}
+	${PDFCMD} ${N1}.ms > ${PDFDIR}/${N1}.pdf 2>/dev/null
+	${PDFCMD} ${N2}.ms > ${PDFDIR}/${N2}.pdf 2>/dev/null
+
+remove:
+	rm -r pdf
