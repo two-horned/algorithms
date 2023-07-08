@@ -1,5 +1,5 @@
 .TL
-Dijkstra-Algorithm
+Dijkstra Algorithm
 .AU
 Said Kadrioski <said@kadrioski.de>
 .PP
