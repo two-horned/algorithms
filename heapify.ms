@@ -36,10 +36,10 @@ fn build-heap<Type>(Array array)
   if (array.size < 2) {
     return;
   }
-  Integer idx = array.size - 2 // 2;
+  Integer idx = (array.size - 2) // 2;
   while(0 <= idx) {
     heapify<Type>(array, idx);
-    i--;
+    idx--;
   }
 }
 
